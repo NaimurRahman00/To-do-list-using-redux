@@ -1,14 +1,21 @@
 import { Provider } from "react-redux"
 import store from "./store/store"
+import { Container, Typography } from "@mui/material"
 
 function App() {
 
   return (
     <>
       <Provider store={store}>
-        <div>Hello Naimur</div>
+        <Container maxWidth='md'>
+          <Typography
+            component='h1'
+            variant="h2"
+            align="center">
+            Todo list
+          </Typography>
+        </Container>
       </Provider>
-
     </>
   )
 }
