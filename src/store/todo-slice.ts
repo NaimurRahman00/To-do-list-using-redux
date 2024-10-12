@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Todo {
     id: string;
@@ -20,7 +20,17 @@ const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
-        addTodo: () => {}
+        addTodo: (state, action:PayloadAction<{name: string; frequency: 'daily' | 'weekly'}>) => {
+            const newTodo:Todo = {
+                id: Date.now().toString(),
+                name: action.payload.name,
+                frequency: action.payload.frequency,
+                completedDates: [],
+                createdAt: new Date().toLocaleString(),
+            }
+
+            state.Todos.push(newTodo);
+        }
     },
 })
 
