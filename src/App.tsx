@@ -2,6 +2,7 @@ import { Provider } from "react-redux"
 import store from "./store/store"
 import { Container, Typography } from "@mui/material"
 import AddTodoForm from "./components/add-todo-form"
+import TodoList from "./components/todo-list"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             Todo list
           </Typography>
           <AddTodoForm/>
+          <TodoList />
         </Container>
       </Provider>
     </>
