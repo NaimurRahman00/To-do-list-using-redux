@@ -30,20 +30,20 @@ const AddTodoForm: React.FC = () => {
                 gap: 2,
             }}>
                 <TextField
-                    label='Todo name'
+                    label='Habit name'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder='Enter todo name'
+                    placeholder='Enter Habit name'
                     fullWidth />
                 <FormControl>
-                    <InputLabel>Frequency</InputLabel>
+                    <InputLabel sx={{bgcolor: 'white', padding: 0.5}}>Frequency</InputLabel>
                     <Select value={frequency}
                         onChange={(e) => setFrequency(e.target.value as 'daily' | 'weekly')}>
                         <MenuItem value='daily'>Daily</MenuItem>
                         <MenuItem value='weekly'>Weekly</MenuItem>
                     </Select>
                 </FormControl>
-                <Button type='submit' variant='contained' color='primary'>Add todo</Button>
+                <Button type='submit' variant='contained' color='primary'>Add a new habit</Button>
             </Box>
         </form>
 

@@ -14,7 +14,7 @@ function App() {
             component='h1'
             variant="h2"
             align="center">
-            Todo list
+            Habit list
           </Typography>
           <AddTodoForm/>
           <TodoList />
